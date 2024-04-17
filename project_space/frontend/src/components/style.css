@@ -1,0 +1,86 @@
+/* Style for the overall table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative; /* Ensures that the absolutely positioned buttons are relative to the table */
+  }
+  
+  /* Style for table headers */
+  th {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-color: #ddd;
+  }
+  
+  /* Style for table rows and data cells */
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Adds a hover effect on table rows */
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Styling for links (Edit/Delete) */
+  a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  /* Additional style for Delete links to make them stand out */
+  .delete-link {
+    color: red;
+  }
+  
+  h2 {
+    color: white;
+    text-align: center; /* Center-align the heading for consistency */
+  }
+  
+  .add-student-btn, .logout-btn , .download-btn{
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000; /* Ensures the button is above other elements */
+  }
+  
+  .add-student-btn {
+    position: fixed; /* Fixed positioning to keep visible regardless of scrolling */
+    top: 20px;
+    right: 20px; /* Adjusted to ensure visibility on all screens */
+  }
+  
+  .logout-btn {
+    position: fixed; /* Consistent with Add Student for better UX */
+    top: 20px;
+    left: 20px;
+  }
+  
+  
+  .download-btn {
+    position: fixed; /* Consistent with Add Student for better UX */
+    top: 20px;
+    right: 150px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .add-student-btn, .logout-btn {
+      position: static;
+      display: block;
+      width: auto; /* Allows buttons to fit content */
+      margin: 10px auto;
+    }
+  }
